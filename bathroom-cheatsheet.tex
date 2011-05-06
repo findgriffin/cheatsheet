@@ -6,7 +6,7 @@
 \usepackage{textcomp}
 \usepackage{multicol}
 \parindent=0pt
-
+\usepackage{fancyhdr}
 % day   bible           cheatsheet
 % 1     light           light
 % 2     firmament       physical constants
@@ -28,7 +28,8 @@
 %
 %
 %
-
+%\pagestyle{fancy}
+%\rfoot{v1.2}
 \newcommand{\sinc}{{\rm sinc}}
 \setlength{\columnsep}{20pt}
 \begin{document}
@@ -81,7 +82,7 @@ and there was a firmament betweeen the heavens and the earth.
 
 On the third day the greeks made significant contributions to language and
 mathematics including, their alphabet:
-
+\begin{center}
 \begin{tabular}{cclccl}
 $\alpha $&$ A $& alpha&$\nu $&$ N $& nu\\
 $\beta $&$ B $& beta&$\xi$&$\Xi$& xi\\
@@ -96,6 +97,17 @@ $\kappa $&$ K $& kappa&$\chi $&$ X $& chi\\
 $\lambda $&$ \Lambda $& lambda&$\psi $&$ \Psi $& psi\\
 $\mu $&$ M $& mu&$\omega $&$ \Omega $& omega\\
 \end{tabular}
+\vfill
+\begin{tabular}{lllll}
+n&& $10^n$&&$10^{-n}$\\
+3& k & kilo & m & milli\\
+6& M & mega & $\mu$ & micro\\
+9& G & giga & n & nano\\
+12& T & tera & p & pico\\
+15& P & peta & f & femto\\
+18& E & exa & a & atto
+\end{tabular}
+\end{center}
 \vfill
 \columnbreak
 And trigonometry.
@@ -116,7 +128,14 @@ and there were stars and atoms were produced to build the planets and moons.
 \vfill
 On the fifth day many mathematicians did make the earth teem with equations and
 their minds were filled with models of the world.
-
+\vfill
+\emph{Bayes} did say \ \ 
+\[
+\begin{array}{ll}
+p(B|A) = \dfrac{p(A|B)p(B)}{p(A)}&p(A)=\mbox{prior prob}\\
+&p(B|A)=\mbox{prob B given A}\\
+\end{array}
+\]
 \vfill
 The statisticians defined.. $E[X]=\mu_X$
 \[
@@ -127,21 +146,12 @@ cov[XY]&=&E[XY]-E[X]E[Y]\\
 \end{array}
 \]
 \vfill
-The French (including \emph{L'Hopital}) declared that...
+\emph{L'Hopital} declared that...
 
 \[\mathop {\lim }\limits_{x \to c} \frac{{f\left( x \right)}}{{g\left( x
 \right)}} = \mathop {\lim }\limits_{x \to c} \frac{{f'\left( x
 \right)}}{{g'\left( x \right)}}\]
 
-\begin{tabular}{lllll}
-n&& $10^n$&&$10^{-n}$\\
-3& k & kilo & m & milli\\
-6& M & mega & $\mu$ & micro\\
-9& G & giga & n & nano\\
-12& T & tera & p & pico\\
-15& P & peta & f & femto\\
-18& E & exa & a & atto
-\end{tabular}
 
 \vfill
 \emph{Newton} did  also observe that \textbf{physical systems} could be
@@ -152,10 +162,9 @@ modelled using a calculus.
 v = Ri&i = C\dfrac{\partial v}{\partial t}&v = L\dfrac{\partial i}{\partial
 t}\\
 
-P = i^2R & E_C = \dfrac{Cv^2}{2} & E_L = \dfrac{Li^2}{2}& E = \mbox{stored
-energy}\\
+P = i^2R & E_C = \dfrac{Cv^2}{2} & E_L = \dfrac{Li^2}{2}& E = \mbox{energy}\\
 
-\mbox{damper}&\mbox{spring}&\mbox{mass}&f_v = \mbox{viscous friction}\\
+\mbox{damper}&\mbox{spring}&\mbox{mass}&f_v = \mbox{friction}\\
 f = f_v v   & v = \dfrac{1}{K}\frac{\partial f}{\partial t}&f =
 M\dfrac{\partial v}{\partial t}&v = \mbox{velocity}\\ f = f_v\dfrac{\partial
 x}{\partial t}    &   f=Kx    & f = M \dfrac{\partial^2 x}{\partial t^2}&f =
@@ -165,31 +174,34 @@ x}{\partial t}    &   f=Kx    & f = M \dfrac{\partial^2 x}{\partial t^2}&f =
 
 \columnbreak
 
-On the sixth day, Stallman did declare that sofware should be free. Free as in
-speech. And Linus did decree...
+On the sixth day, \emph{Stallman} did declare that sofware should be free. Free as in
+speech. And \emph{Linus} did decree...
 
 \begin{tabular}{ll}
-\texttt{w}& display who is online\\
+%\texttt{w}& display who is online\\
 \texttt{uname -a}& kernel config\\
 \texttt{lsb\_release -rcs}& release version\\
-\texttt{grep patt fils}& find pattern in files\\
+\texttt{grep patt files}& find pattern in files\\
 \texttt{command \&}& run command in bg\\
 \texttt{fg n}& bring n to fg\\
 \texttt{fg}& bring most recent to fg\\
+\texttt{lynx -dump url}&get text of page\\
+\texttt{wc }& word count\\
 \end{tabular}
-\vfill
-\bigskip
-but a GNOME did appear..
 
-\begin{tabular}{ll}
-\texttt{alt+tab}&switch windows\\
-\texttt{alt+esc}&in reverse order\\
-\texttt{ctrl+PgUp}&previous terminal tab\\
-\texttt{SUPER+4}&change rating to 4 in Amarok\\
-\end{tabular}
+\texttt{cat file | sort -R | head -n 10}
 \vfill
-\bigskip
-Google did declare that things could be done better.
+%But a GNOME did appear..
+%
+%begin{tabular}{ll}
+%texttt{alt+tab}&switch windows\\
+%texttt{alt+esc}&in reverse order\\
+%texttt{ctrl+PgUp}&previous terminal tab\\
+%texttt{SUPER+4}&change rating to 4 in Amarok\\
+%\end{tabular}
+%\vfill
+%\bigskip
+\emph{Google} did declare that things could be done better.
 
 \bigskip
 
@@ -242,32 +254,33 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \begin{tabular}{ll}
 &\texttt{MOVING}\\
 &\emph{remember to prepend repetitions}\\
-\texttt{0}& beginning of line\\
-\texttt{\^{}}& first char of line\\
-\texttt{\$}& EOL\\
-\texttt{nG}& go to line n\\
 \texttt{w|W}& next word \textbar{} spaces\\
 \texttt{b|B}& back word \textbar{} spaces\\
 \texttt{e|E}& end of word \textbar{} spaces\\
 \texttt{z[b|t|z]}& scroll\\
-\end{tabular}
-\vfill
-\begin{tabular}{ll}
+\texttt{fx|Fx}& move forward \textbar{} backward to x\\
+\texttt{(|)}& move to previous \textbar{} next sentence\\
+\texttt{nG}& go to line n\\
+\texttt{\^{}}& first char of line\\
+\texttt{0|\$}& BOL \textbar{} EOL\\
+\texttt{gg|G}&BOF \textbar{} EOF\\
+\texttt{\`{}.}& line last edited\\
+\texttt{gd}& definition of variable\\
+\texttt{\#|*}& previous \textbar{} next occurance of word\\
+\texttt{\%}& matching brace\\
+\\
 &\texttt{EDITING}\\
 &\emph{remember to use movement commands}\\
 \texttt{i|I}& insert \textbar{} beginning of line\\
 \texttt{a|A}& append \textbar{} end of line\\
 \texttt{r|R}& replace \textbar{} many chars\\
 \texttt{J}& join line below to current\\
-\texttt{c|C}& replace \textbar{} line\\
+\texttt{c|C}& replace \textbar{} to EOL\\
 \texttt{y|Y}& yank \textbar{} line\\
 \texttt{p|P}& paste \textbar{} before cursor\\
 \texttt{d|dd}& delete \textbar{} line\\
 \texttt{D}& delete to EOL\\
 \texttt{u|U}& undo \textbar{} linewise\\
-&\\
-&\texttt{VISUAL MODE}\\
-&\emph{remember: moving+editing cmds}\\
 \texttt{v|V}& start visual \textbar{} linewise\\
 \texttt{<|>}& deindent \textbar{} indent\\
 \end{tabular}
@@ -291,7 +304,10 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \texttt{ctrl+wv}&split vert\\
 \end{tabular}
 
+\vfill
+On the seventh day. The machines became aware.
 
+``All models are wrong, some are useful.'' - George Box
 \clearpage
 
 \subsection*{EE Stuff}
