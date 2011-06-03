@@ -185,11 +185,8 @@ speech. And \emph{Linus} did decree...
 \texttt{command \&}& run command in bg\\
 \texttt{fg n}& bring n to fg\\
 \texttt{fg}& bring most recent to fg\\
-\texttt{lynx -dump url}&get text of page\\
-\texttt{wc }& word count\\
 \end{tabular}
 
-\texttt{cat file | sort -R | head -n 10}
 \vfill
 %But a GNOME did appear..
 %
@@ -233,18 +230,31 @@ speech. And \emph{Linus} did decree...
 \texttt{m|a}&month \textbar{} agenda view\\
 \texttt{alt+s}&save event\\
 \\
-&\texttt{CHROME}\\
-\texttt{ctrl}&\emph{precedes all following cmds}\\
-\texttt{n}&goto tab n\\
-\texttt{w}&close tab/popup\\
-\texttt{9}&last tab\\
-\texttt{PgDown}&next tab\\
-\texttt{PgUp}&prev tab\\
-\texttt{shift+t}&reopen closed tab\\
-\texttt{l}&highlight url\\
-\texttt{f}&open find bar\\
+%&\texttt{CHROME}\\
+%\texttt{ctrl}&\emph{precedes all following cmds}\\
+%\texttt{n}&goto tab n\\
+%\texttt{w}&close tab/popup\\
+%\texttt{9}&last tab\\
+%\texttt{PgDown}&next tab\\
+%\texttt{PgUp}&prev tab\\
+%\texttt{shift+t}&reopen closed tab\\
+%\texttt{l}&highlight url\\
+%\texttt{f}&open find bar\\
+&\texttt{VIMIUM}\\
+&\emph{remember cmd repetition etc.}\\
+\texttt{d}&down half a page\\
+\texttt{f|F}&open link \textbar{} in new tab\\
+\texttt{r}&reload\\
+\texttt{zi|zo|z0}&zoom\\
+\texttt{yy}&copy url\\
+\texttt{gf}&goto next frame\\
+\texttt{/|n|N}&find \textbar{} next \textbar{} prev\\
+\texttt{H|L}&back \textbar{} forward\\
+\texttt{J|K}&tab left \textbar{} right\\
+\texttt{t|x|X}&create \textbar{} close \textbar{} restore tab\\
+\texttt{[[ | ]]}&prev \textbar{} next\\
+\texttt{gi}&go to first (or nth) text input\\
 \end{tabular}
-
 \vfill
 \columnbreak
 The community declared that Vi should be iMproved, and Vi was improved to
@@ -254,8 +264,8 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \begin{tabular}{ll}
 &\texttt{MOVING}\\
 &\emph{remember to prepend repetitions}\\
-\texttt{w|W}& next word \textbar{} spaces\\
-\texttt{b|B}& back word \textbar{} spaces\\
+%\texttt{w|W}& next word \textbar{} spaces\\
+%\texttt{b|B}& back word \textbar{} spaces\\
 \texttt{e|E}& end of word \textbar{} spaces\\
 \texttt{z[b|t|z]}& scroll\\
 \texttt{fx|Fx}& move forward \textbar{} backward to x\\
@@ -271,18 +281,24 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \\
 &\texttt{EDITING}\\
 &\emph{remember to use movement commands}\\
-\texttt{i|I}& insert \textbar{} beginning of line\\
-\texttt{a|A}& append \textbar{} end of line\\
+%\texttt{i|I}& insert \textbar{} beginning of line\\
+%\texttt{a|A}& append \textbar{} end of line\\
 \texttt{r|R}& replace \textbar{} many chars\\
 \texttt{J}& join line below to current\\
-\texttt{c|C}& replace \textbar{} to EOL\\
-\texttt{y|Y}& yank \textbar{} line\\
+\texttt{c|C|cc}& replace \textbar{} to EOL \textbar{} linewise\\
+\texttt{y|Y|yy}& yank \textbar{} to EOL \textbar{} linewise\\
+\texttt{d|D|dd}& delete \textbar{} to EOL \textbar{} linewise\\
 \texttt{p|P}& paste \textbar{} before cursor\\
-\texttt{d|dd}& delete \textbar{} line\\
-\texttt{D}& delete to EOL\\
 \texttt{u|U}& undo \textbar{} linewise\\
 \texttt{v|V}& start visual \textbar{} linewise\\
 \texttt{<|>}& deindent \textbar{} indent\\
+\texttt{\~}& switch case\\
+\\
+&\texttt{SPELL\ \ \ :set spell}\\
+\texttt{[|]s}&prev \textbar{} next\\
+\texttt{zg}&add to dictionary\\
+\texttt{zug}&undo addition to dictionary\\
+\texttt{z=}&view spelling suggestions\\
 \end{tabular}
 
 \vfill
@@ -304,10 +320,57 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \texttt{ctrl+wv}&split vert\\
 \end{tabular}
 
-\vfill
+\clearpage
 On the seventh day. The machines became aware.
+\begin{tabular}{l}
+OBTAIN\\
+\texttt{lynx -dump url} get text of page\\
+\texttt{curl url/apicall}\\
+\texttt{wc } word count\\
+\\
+SCRUB\\
+\\
+EXPLORE\\
+print some random lines\\
+\texttt{cat file | sort -R | head -n 10}\\
+\texttt{less file} \emph{remember Vim cmds}\\
+MODEL\\
+\\
+INTERPRET\\
+\\
+\end{tabular}
 
+\begin{tabular}{l}
+Python Tricks\\
+\texttt{if "str" in string:}\\
+\texttt{\ \ \  print "str is in string"}\\
+Pretty print a list\\
+\texttt{print ",".join(list\_of\_things)}\\
+Filtering lists:\\
+\texttt{numsUnder4 = filter(lambda x: x < 4,nums)}\\
+is equivalent to\\
+\texttt{numsUnder4 = [n for n in nums if n < 4]}\\
+Generator Expressions are more efficient:\\
+\texttt{squaresU10 = (n*n for n in nums if n*n < 10)}\\
+Each successive value of squaresU10 can be gotten by calling .next(), or\ldots\\
+\texttt{for s in squaresU10:}\\
+\texttt{\ \ \  print s}\\
+Reducing:\\
+\texttt{result = reduce(lambda a,b: a*b, numbers)}\\
+
+\end{tabular}
+%TODO command line tools
+%http://www.pixelbeat.org/cmdline.html
+\vfill
+Stand back. I know regular expressions.
+% http://www.addedbytes.com/cheat-sheets/regular-expressions-cheat-sheet/
+\bigskip
+\begin{tabular}{ll}
+\texttt{([A-Za-z0-9-]+)}&letters, numbers and hyphens\\
+\end{tabular}
+\vfill
 ``All models are wrong, some are useful.'' - George Box
+\vfill
 \clearpage
 
 \subsection*{EE Stuff}
@@ -820,5 +883,34 @@ slope $\beta_j$
 SML goes from $r_0$ to $(\mu_M,1)$ on $(\mu_j,\beta_j)$ plane.
 
 Assets above the SML are underpriced.
+\subsubsection{Options}
+\begin{description}
+\item[call] the right to purchase at the exercise or strike price (writer must
+sell)
+\item[put] the right to sell at ex or strike price (writer must buy)
+\item[American] can be exercised on or before the expiry date
+\item[European] can be exercised only at the expiry date
+\end{description}
+
+\clearpage
+
+\subsubsection*{Extra Nonsense}
+\begin{tabular}{ll}
+HTTP&codes\\
+1xx&informational\\
+2xx&success\\
+3xx&redirection\\
+4xx&client error\\
+400&bad request\\
+401&unauthorized\\
+403&forbidden\\
+404&not found\\
+5xx&server error\\
+500&server error\\
+501&not implemented\\
+502&bad gateway\\
+503&service unavailable\\
+504&gateway timeout\\
+\end{tabular}
 \end{multicols}
 \end{document}
