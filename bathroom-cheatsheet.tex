@@ -321,57 +321,57 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \end{tabular}
 
 \clearpage
-On the seventh day. The machines became aware.
-\begin{tabular}{l}
-OBTAIN\\
-\texttt{lynx -dump url} get text of page\\
-\texttt{curl url/apicall}\\
-\texttt{wc } word count\\
-\\
-SCRUB\\
-\\
-EXPLORE\\
-print some random lines\\
-\texttt{cat file | sort -R | head -n 10}\\
-\texttt{less file} \emph{remember Vim cmds}\\
-MODEL\\
-\\
-INTERPRET\\
-\\
-\end{tabular}
-
-\begin{tabular}{l}
-Python Tricks\\
-\texttt{if "str" in string:}\\
-\texttt{\ \ \  print "str is in string"}\\
-Pretty print a list\\
-\texttt{print ",".join(list\_of\_things)}\\
-Filtering lists:\\
-\texttt{numsUnder4 = filter(lambda x: x < 4,nums)}\\
-is equivalent to\\
-\texttt{numsUnder4 = [n for n in nums if n < 4]}\\
-Generator Expressions are more efficient:\\
-\texttt{squaresU10 = (n*n for n in nums if n*n < 10)}\\
-Each successive value of squaresU10 can be gotten by calling .next(), or\ldots\\
-\texttt{for s in squaresU10:}\\
-\texttt{\ \ \  print s}\\
-Reducing:\\
-\texttt{result = reduce(lambda a,b: a*b, numbers)}\\
-
-\end{tabular}
-%TODO command line tools
-%http://www.pixelbeat.org/cmdline.html
-\vfill
-Stand back. I know regular expressions.
-% http://www.addedbytes.com/cheat-sheets/regular-expressions-cheat-sheet/
-\bigskip
-\begin{tabular}{ll}
-\texttt{([A-Za-z0-9-]+)}&letters, numbers and hyphens\\
-\end{tabular}
-\vfill
-``All models are wrong, some are useful.'' - George Box
-\vfill
-\clearpage
+%On the seventh day. The machines became aware.
+%\begin{tabular}{l}
+%OBTAIN\\
+%\texttt{lynx -dump url} get text of page\\
+%\texttt{curl url/apicall}\\
+%\texttt{wc } word count\\
+%\\
+%SCRUB\\
+%\\
+%EXPLORE\\
+%print some random lines\\
+%\texttt{cat file | sort -R | head -n 10}\\
+%\texttt{less file} \emph{remember Vim cmds}\\
+%MODEL\\
+%\\
+%INTERPRET\\
+%\\
+%\end{tabular}
+%
+%\begin{tabular}{l}
+%Python Tricks\\
+%\texttt{if "str" in string:}\\
+%\texttt{\ \ \  print "str is in string"}\\
+%Pretty print a list\\
+%\texttt{print ",".join(list\_of\_things)}\\
+%Filtering lists:\\
+%\texttt{numsUnder4 = filter(lambda x: x < 4,nums)}\\
+%is equivalent to\\
+%\texttt{numsUnder4 = [n for n in nums if n < 4]}\\
+%Generator Expressions are more efficient:\\
+%\texttt{squaresU10 = (n*n for n in nums if n*n < 10)}\\
+%Each successive value of squaresU10 can be gotten by calling .next(), or\ldots\\
+%\texttt{for s in squaresU10:}\\
+%\texttt{\ \ \  print s}\\
+%Reducing:\\
+%\texttt{result = reduce(lambda a,b: a*b, numbers)}\\
+%
+%\end{tabular}
+%%TODO command line tools
+%%http://www.pixelbeat.org/cmdline.html
+%\vfill
+%Stand back. I know regular expressions.
+%% http://www.addedbytes.com/cheat-sheets/regular-expressions-cheat-sheet/
+%\bigskip
+%\begin{tabular}{ll}
+%\texttt{([A-Za-z0-9-]+)}&letters, numbers and hyphens\\
+%\end{tabular}
+%\vfill
+%``All models are wrong, some are useful.'' - George Box
+%\vfill
+%\clearpage
 
 \subsection*{EE Stuff}
 \begin{tabular}{ll}
@@ -399,9 +399,9 @@ $\dfrac{-\jmath}{\omega C} = \dfrac{1}{\jmath \omega C} = $&$Z_c$\\
 \[
 A_{v/i} = 20 \log_{10}{|A_{v/i}|} dB \hspace{15 mm} A_p = 10 log|A_p| dB
 \]
-\includegraphics[width=70mm]{inverting-amp.png} 
+\includegraphics[width=60mm]{inverting-amp.png} 
 
-\includegraphics[width=70mm]{noninverting-amp.png} 
+\includegraphics[width=60mm]{noninverting-amp.png} 
 \vfill
 Differential input is $v_1 - v_2$ Common mode input is $\dfrac{v_1+v_2}{2}$
 
@@ -501,9 +501,30 @@ V_t)^2\]
 JFET equations
 \[i_D = I_{DSS} \left(1 - \frac{V_{GS}}{V_P}\right)^2\]
 \[g_m = \left(\frac{2I_{DSS}}{|V_p|}\right)\sqrt{\frac{I_D}{I{DSS}}}\]
-\subsubsection*{3405 Stuff}
-Gain of a feedback amp:
-\[ A = \dfrac{x_0}{x_i}=\dfrac{a}{1+a\cdot \beta}\]
+
+%\subsubsection*{3405 Stuff}
+%Gain of a feedback amp:
+%\[ A = \dfrac{x_0}{x_i}=\dfrac{a}{1+a\cdot \beta}\]
+
+\subsubsection*{3404 Formulae}
+\[ \begin{array}{cccc}
+r_0=  &     &g_m    &\\
+r_\pi &     &\alpha &\\
+r_e   &     &f_t    &\\
+\end{array} \]
+\emph{Formulae you should know...}
+\[ \begin{array}{rlrl}
+P_S=&2I_SV_{CC}=\dfrac{2V_{CC}\hat{V}_O}{\pi R_L}&
+P_L=&\dfrac{\hat{V}^2_O}{2 R_L}\\
+\hat{V}_O|_{P_{Dmax}}=&\dfrac{2 V_{CC}}{\pi}
+&P_{Dmax}=&\dfrac{2V^2_{CC}}{\pi^2R_L}\\
+f_L=&f_{L1}+f_{L2}+f_{L3}&f_H=&\dfrac{1}{2\pi C_{in}R'_{sig}}\\
+C_{in}= &C_\pi+C_{eq}&&\\
+        &C_\pi+C_\mu(1+g_mR'_L)&&\\
+\end{array}\]
+In HF hybrid $\pi$-model $C_\pi||r_\pi$ and $C_\mu$ connects base and collector.
+
+$f_L$ and $f_H$ are the lower and upper 3dB frequencies.
 \columnbreak
 \subsubsection*{Signals and Systems}
 Unilateral laplace properties \[x \rightarrow x(t) \mbox{ and } X \rightarrow X(s)\]
