@@ -269,36 +269,38 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \texttt{e|E}& end of word \textbar{} spaces\\
 \texttt{z[b|t|z]}& scroll\\
 \texttt{fx|Fx}& move forward \textbar{} backward to x\\
-\texttt{(|)}& move to previous \textbar{} next sentence\\
+\texttt{(|) \{|\}}& move by sentence \textbar{} paragraph\\
 \texttt{nG}& go to line n\\
-\texttt{\^{}}& first char of line\\
-\texttt{0|\$}& BOL \textbar{} EOL\\
+\texttt{0|\^{}|\$}& BOL \textbar{} FCOL \textbar{}EOL\\
 \texttt{gg|G}&BOF \textbar{} EOF\\
-\texttt{\`{}.}& line last edited\\
 \texttt{gd}& definition of variable\\
 \texttt{\#|*}& previous \textbar{} next occurance of word\\
 \texttt{\%}& matching brace\\
+\texttt{mx|'x}&set mark x \textbar{} goto line of x\\
+\texttt{\`{}x|\`{}.}&goto mark x \textbar{} line last edited\\
 \\
 &\texttt{EDITING}\\
 &\emph{remember to use movement commands}\\
 %\texttt{i|I}& insert \textbar{} beginning of line\\
 %\texttt{a|A}& append \textbar{} end of line\\
+\texttt{"xyy|"Xyy}&copy \textbar{} append line to register x\\
 \texttt{r|R}& replace \textbar{} many chars\\
 \texttt{J}& join line below to current\\
 \texttt{c|C|cc}& replace \textbar{} to EOL \textbar{} linewise\\
 \texttt{y|Y|yy}& yank \textbar{} to EOL \textbar{} linewise\\
 \texttt{d|D|dd}& delete \textbar{} to EOL \textbar{} linewise\\
 \texttt{p|P}& paste \textbar{} before cursor\\
-\texttt{u|U}& undo \textbar{} linewise\\
-\texttt{v|V}& start visual \textbar{} linewise\\
-\texttt{<|>}& deindent \textbar{} indent\\
-\texttt{\~}& switch case\\
+\texttt{u|U v|V}& undo \textbar{} linewise start visual \textbar{} linewise\\
+\texttt{<|>|\~}& deindent \textbar{} indent \textbar{} switch case\\
 \\
 &\texttt{SPELL\ \ \ :set spell}\\
 \texttt{[|]s}&prev \textbar{} next\\
-\texttt{zg}&add to dictionary\\
-\texttt{zug}&undo addition to dictionary\\
+\texttt{zg|zug}&add \textbar{} undo to dictionary\\
 \texttt{z=}&view spelling suggestions\\
+\\
+&\texttt{MACROS}\\
+\texttt{ESC q|q|a}&start \textbar{} stop \textbar{} store in a\\
+\texttt{3@a}&repeat a 3 times\\
 \end{tabular}
 
 \vfill
@@ -306,18 +308,20 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \begin{tabular}{ll}
 &\texttt{COMMANDS}\\
 &\emph{entered after }\texttt{ :}\\
-\texttt{/ptn}& search for pattern\\
-\texttt{?ptn}& search backward\\
+\texttt{/ptn|?ptn}& search \textbar{} for pattern\\
 \texttt{n|N}& repeat search \textbar{} backwards\\
 \texttt{\%s/old/new/g}&replace all old with new\\
-\texttt{8,20s/\$/text/}&append text to lines 8-20\\
-\texttt{s/\^{}/txt/}&prepend text to current line\\
+\texttt{.,\$s/\$/text/}&append text to lines here to EOF\\
+\texttt{.,+21g/foo/d}&del lines containing foo from next 21\\
+\texttt{s|d|j|m}&substitute \textbar{} delete \textbar{} join \textbar{}move\\
+\texttt{g|v}& globally \textbar{} converse\\
+\texttt{r|r!}& read contents of file \textbar{} command\\
+\texttt{s/\^{}/txt/}&prepend txt to current line\\
 \texttt{bd}&close buffer\\
 \texttt{sp}&open file and split window\\
-\texttt{ctrl+ws}&split window\\
+\texttt{ctrl+ws|ctrl+wv}&split window\textbar{} vertically\\
 \texttt{ctrl+ww}&switch windows\\
 \texttt{ctrl+ww}&quit a window\\
-\texttt{ctrl+wv}&split vert\\
 \end{tabular}
 
 \clearpage
