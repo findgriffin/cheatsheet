@@ -39,25 +39,25 @@ In the beginning, there was nothing, which exploded.
 On the first day, \emph{Maxwell} said..
 \[
 \begin{array}{rcl}
-\nabla \cdot \textbf{E} &=& \frac{\rho}{e_0}\\
+\nabla \cdot \textbf{E} &=& \dfrac{\rho}{e_0}\\
 \nabla \cdot \textbf{B} &=& 0 \\ 
-\nabla \times \textbf{E} &=& -\frac{\partial \textbf{B}}{\partial t}\\
-\nabla \times \textbf{B} &=& \mu_0 \textbf{J} + \mu_0\epsilon_0 \frac{\partial
+\nabla \times \textbf{E} &=& -\dfrac{\partial \textbf{B}}{\partial t}\\
+\nabla \times \textbf{B} &=& \mu_0 \textbf{J} + \mu_0\epsilon_0 \dfrac{\partial
 \textbf{E}}{\partial t}\\ 
-\nabla &=& \frac{\partial}{\partial x}\textbf{x} +\frac{\partial} {\partial y}
-\textbf{y}+\frac{\partial}{\partial z}\textbf{z}\\
+\nabla &=& \dfrac{\partial}{\partial x}\textbf{x} +\dfrac{\partial} {\partial y}
+\textbf{y}+\dfrac{\partial}{\partial z}\textbf{z}\\
 \end{array}
 \]
 in other words $\ldots$
 
 \[
 \begin{array}{rcl}
-\oiint_{\partial V}\textbf{E} \cdot d\textbf{A} &=& \frac{Q_f(V)}{\epsilon_0}\\
+\oiint_{\partial V}\textbf{E} \cdot d\textbf{A} &=& \dfrac{Q_f(V)}{\epsilon_0}\\
 \oiint_{\partial V}\textbf{B} \cdot d\textbf{A} &=& 0\\
-\oint_{\partial S}\textbf{E} \cdot d\textbf{l} &=& -\frac{\partial
+\oint_{\partial S}\textbf{E} \cdot d\textbf{l} &=& -\dfrac{\partial
 \Phi_{B,S}}{\partial t}\\ 
 \oint_{\partial S}\textbf{B} \cdot d\textbf{l} &=& \mu_0I_S + \mu_0 \epsilon_0
-\frac{ \partial \Phi_{E,S}}{\partial t}\\
+\dfrac{ \partial \Phi_{E,S}}{\partial t}\\
 
 \end{array}
 \]
@@ -607,13 +607,11 @@ Reliability is measured by Bit Error Rate (BER)
 \[
 C = B \log_2 (1+SNR) \mbox{ \ \ bits per second}
 \]
-\begin{description}
-\item[C] information capacity
-\item[B] channel bandwidth
-\item[R] signaling rate
-\item[SNR] signal / noise ratio
-\item[W] message bandwidth
-\end{description}
+\begin{tabular}{llll}
+C&information capacity&B& channel BW\\
+R& signaling rate&SNR& s / n ratio\\
+W& message BW\\
+\end{tabular}
 \[
 \eta = \frac{R}{C} \mbox{ \ \ measure of system efficiency}
 \]
@@ -695,6 +693,25 @@ f(1+1/\beta)$
 \item[$N_0$] avg noise power per unit bandwidth measured at front end of
 reciever 
 \end{description}
+
+\subsubsection*{Pulse Modulation}
+\emph{Sampling theorem:} A band-limited signal $(-W < f < W)$ of finite E is
+completely described by its samples at freq 2W (Nyquist rate).
+
+Pulse-amplitude modulation (PAM) can be multiplexed by interleaving N samples
+for N signals.
+
+We can also modulate the \emph{duration} (PDM) or \emph{position} (PPM).
+
+Pulse-code modulation (PCM), line coding schemes: unipolar NRZ, polar NRZ,
+unipolar RZ, bipolar RZ, split-phase (Manchester) or differential encoding.
+Two noise sources, \emph{channel} and \emph{quantization}. We measure the
+average probability of symbol errors in the recieved signal or bit-error rate
+(BER).
+
+Noise is AWGN thus BER depends on transmitted signal energy per bit and the
+noise spectral density, $\dfrac{E_b}{N_0}$. Below the error threshold the
+probability of an error increases sharply.
 
 %\subsubsection*{Pulse Modulation}
 %\begin{description}
@@ -888,23 +905,23 @@ holding risk free asset and a mutual fund.
 
 All efficient portfolios share the same Sharpe ratio.
 
-\subsubsection*{The CAPM}
-Assumptions: \emph{equilibrium, frictionless, unlimited borrowing/lending,
-assets are divisible, investors are price takers, taxes are neutral} We use
-mean-variance portfolio selection, and homogenous beliefs.
-
-\[\beta_{jZ}=\sigma_{jZ}/\sigma^2_Z\mbox{ \ }z_1,\ldots,z_n \mbox{ is
-portfolio} \sum z_j=1\]
-
-CML goes from $r_0$ on $\mu$ axis with slope of $(\mu_M-r_0)/\sigma_M$
-
-Characteristic line goes through origin of $\mu_j-r_0,\mu_M-r_0)$ plane with
-slope $\beta_j$
-
-SML goes from $r_0$ to $(\mu_M,1)$ on $(\mu_j,\beta_j)$ plane.
-
-Assets above the SML are underpriced.
-\subsubsection{Options}
+%\subsubsection*{The CAPM}
+%Assumptions: \emph{equilibrium, frictionless, unlimited borrowing/lending,
+%assets are divisible, investors are price takers, taxes are neutral} We use
+%mean-variance portfolio selection, and homogenous beliefs.
+%
+%\[\beta_{jZ}=\sigma_{jZ}/\sigma^2_Z\mbox{ \ }z_1,\ldots,z_n \mbox{ is
+%portfolio} \sum z_j=1\]
+%
+%CML goes from $r_0$ on $\mu$ axis with slope of $(\mu_M-r_0)/\sigma_M$
+%
+%Characteristic line goes through origin of $\mu_j-r_0,\mu_M-r_0)$ plane with
+%slope $\beta_j$
+%
+%SML goes from $r_0$ to $(\mu_M,1)$ on $(\mu_j,\beta_j)$ plane.
+%
+%Assets above the SML are underpriced.
+\subsubsection*{Options}
 \begin{description}
 \item[call] the right to purchase at the exercise or strike price (writer must
 sell)
@@ -915,23 +932,23 @@ sell)
 
 \clearpage
 
-\subsubsection*{Extra Nonsense}
-\begin{tabular}{ll}
-HTTP&codes\\
-1xx&informational\\
-2xx&success\\
-3xx&redirection\\
-4xx&client error\\
-400&bad request\\
-401&unauthorized\\
-403&forbidden\\
-404&not found\\
-5xx&server error\\
-500&server error\\
-501&not implemented\\
-502&bad gateway\\
-503&service unavailable\\
-504&gateway timeout\\
-\end{tabular}
+%\subsubsection*{Extra Nonsense}
+%\begin{tabular}{ll}
+%HTTP&codes\\
+%1xx&informational\\
+%2xx&success\\
+%3xx&redirection\\
+%4xx&client error\\
+%400&bad request\\
+%401&unauthorized\\
+%403&forbidden\\
+%404&not found\\
+%5xx&server error\\
+%500&server error\\
+%501&not implemented\\
+%502&bad gateway\\
+%503&service unavailable\\
+%504&gateway timeout\\
+%\end{tabular}
 \end{multicols}
 \end{document}
