@@ -325,57 +325,77 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \end{tabular}
 
 \clearpage
-%On the seventh day. The machines became aware.
-%\begin{tabular}{l}
-%OBTAIN\\
-%\texttt{lynx -dump url} get text of page\\
-%\texttt{curl url/apicall}\\
-%\texttt{wc } word count\\
-%\\
-%SCRUB\\
-%\\
-%EXPLORE\\
-%print some random lines\\
-%\texttt{cat file | sort -R | head -n 10}\\
-%\texttt{less file} \emph{remember Vim cmds}\\
-%MODEL\\
-%\\
-%INTERPRET\\
-%\\
-%\end{tabular}
-%
-%\begin{tabular}{l}
-%Python Tricks\\
-%\texttt{if "str" in string:}\\
-%\texttt{\ \ \  print "str is in string"}\\
-%Pretty print a list\\
-%\texttt{print ",".join(list\_of\_things)}\\
-%Filtering lists:\\
-%\texttt{numsUnder4 = filter(lambda x: x < 4,nums)}\\
-%is equivalent to\\
-%\texttt{numsUnder4 = [n for n in nums if n < 4]}\\
-%Generator Expressions are more efficient:\\
-%\texttt{squaresU10 = (n*n for n in nums if n*n < 10)}\\
-%Each successive value of squaresU10 can be gotten by calling .next(), or\ldots\\
-%\texttt{for s in squaresU10:}\\
-%\texttt{\ \ \  print s}\\
-%Reducing:\\
-%\texttt{result = reduce(lambda a,b: a*b, numbers)}\\
-%
-%\end{tabular}
-%%TODO command line tools
-%%http://www.pixelbeat.org/cmdline.html
-%\vfill
-%Stand back. I know regular expressions.
-%% http://www.addedbytes.com/cheat-sheets/regular-expressions-cheat-sheet/
-%\bigskip
-%\begin{tabular}{ll}
-%\texttt{([A-Za-z0-9-]+)}&letters, numbers and hyphens\\
-%\end{tabular}
-%\vfill
-%``All models are wrong, some are useful.'' - George Box
-%\vfill
-%\clearpage
+\begin{tabular}{ll}
+&\texttt{BASH SHORTCUTS}\\
+&\emph{C:Ctrl A:Alt}\\
+\texttt{C+a|e}&goto start \textbar{} end\\
+\texttt{C+u|k}&delete from cursor to start \textbar{} end\\
+\texttt{A+f|b}&go forward \textbar{} back by one word\\
+\texttt{!!}&run last command\\
+\texttt{!ls}&run last invocation of ls\\
+\texttt{!ls:p}&print what would be run\\
+\texttt{C+s|q}&stop \textbar{} resume output to screen\\
+\end{tabular}
+\vfill
+On the seventh day. The machines became aware.
+\begin{tabular}{l}
+OBTAIN\\
+\texttt{lynx -dump url} get text of page\\
+\texttt{curl url/apicall}\\
+\texttt{wc } word count\\
+\\
+SCRUB\\
+print cols 1 and 2\\
+\texttt{awk '\{print \$1\$2\}' logs.txt}\\
+print whole lines\\
+\texttt{awk '\{print \$0\}' file}\\
+print \texttt{linenumber col1 -> numfields-2}\\
+\texttt{awk '\{print NR,$1 " -> " $(NF-2)\}'}\\
+use colon delimiter\\
+\texttt{awk 'BEGIN\{FS=":"\}\{print \$1\}'}\\
+print if second last field is '200'\\
+\texttt{awk '\{if (\$(NF-2) == "200") \{print \$0\}\}'}\\
+\\
+EXPLORE\\
+print some random lines\\
+\texttt{cat file | sort -R | head -n 10}\\
+\texttt{less file} \emph{remember Vim cmds}\\
+MODEL\\
+\\
+INTERPRET\\
+\\ \end{tabular} 
+\begin{tabular}{l}
+Python Tricks\\
+\texttt{if "str" in string:}\\
+\texttt{\ \ \  print "str is in string"}\\
+Pretty print a list\\
+\texttt{print ",".join(list\_of\_things)}\\
+Filtering lists:\\
+\texttt{numsUnder4 = filter(lambda x: x < 4,nums)}\\
+is equivalent to\\
+\texttt{numsUnder4 = [n for n in nums if n < 4]}\\
+Generator Expressions are more efficient:\\
+\texttt{squaresU10 = (n*n for n in nums if n*n < 10)}\\
+Each successive value of squaresU10 can be gotten by calling .next(), or\ldots\\
+\texttt{for s in squaresU10:}\\
+\texttt{\ \ \  print s}\\
+Reducing:\\
+\texttt{result = reduce(lambda a,b: a*b, numbers)}\\
+
+\end{tabular}
+%TODO command line tools
+%http://www.pixelbeat.org/cmdline.html
+\vfill
+Stand back. I know regular expressions.
+% http://www.addedbytes.com/cheat-sheets/regular-expressions-cheat-sheet/
+\bigskip
+\begin{tabular}{ll}
+\texttt{([A-Za-z0-9-]+)}&letters, numbers and hyphens\\
+\end{tabular}
+\vfill
+``All models are wrong, some are useful.'' - George Box
+\vfill
+\clearpage
 
 \subsection*{EE Stuff}
 \begin{tabular}{ll}
