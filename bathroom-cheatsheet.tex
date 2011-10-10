@@ -188,16 +188,52 @@ speech. And \emph{Linus} did decree...
 \end{tabular}
 
 \vfill
-%But a GNOME did appear..
-%
-%begin{tabular}{ll}
-%texttt{alt+tab}&switch windows\\
-%texttt{alt+esc}&in reverse order\\
-%texttt{ctrl+PgUp}&previous terminal tab\\
-%texttt{SUPER+4}&change rating to 4 in Amarok\\
-%\end{tabular}
-%\vfill
-%\bigskip
+\begin{tabular}{ll}
+&\texttt{BASH SHORTCUTS}\\
+&\emph{C:Ctrl A:Alt}\\
+\texttt{C+a|e}&goto start \textbar{} end\\
+\texttt{C+u|k}&delete from cursor to start \textbar{} end\\
+\texttt{A+f|b}&go forward \textbar{} back by one word\\
+\texttt{!!}&run last command\\
+\texttt{!ls}&run last invocation of ls\\
+\texttt{!ls:p}&print what would be run\\
+\texttt{C+s|q}&stop \textbar{} resume output to screen\\
+\end{tabular}
+\vfill
+And the founding fathers did needed a system to automate their workflow, in
+other words they needed to \texttt{make} things.
+\bigskip 
+\begin{tabbing}
+\texttt{tar\%get...}\= \texttt{: dependencies ...}\\
+\>\texttt{command}\\
+\>\texttt{...}\\
+\end{tabbing}
+\bigskip
+The system could assign variables such as \texttt{var\_name = definition} which
+could be expanded with \texttt{\$(var\_name)}.
+\bigskip
+The system had some useful automatic variables...
+\bigskip
+\begin{tabular}{ll}
+\texttt{\%}&the \emph{stem}\\
+\texttt{\$*}&stem matched by rule\\
+\texttt{\$@}&filename of target\\
+\texttt{\$<}&first dependency\\
+\texttt{\$?}&all the dependencies that have changed\\
+\texttt{\$\^}&all the dependencies\\
+\texttt{}&\\
+\end{tabular}
+\vfill
+But a GNOME did appear..
+
+\begin{tabular}{ll}
+\texttt{alt+tab}&switch windows\\
+\texttt{alt+esc}&in reverse order\\
+\texttt{ctrl+PgUp}&previous terminal tab\\
+\texttt{SUPER+4}&change rating to 4 in Amarok\\
+\end{tabular}
+\vfill
+\columnbreak
 \emph{Google} did declare that things could be done better.
 
 \bigskip
@@ -260,7 +296,6 @@ speech. And \emph{Linus} did decree...
 The community declared that Vi should be iMproved, and Vi was improved to
 create ViM, the nerdiest of the text editors (except for emacs).
 \bigskip
-
 \begin{tabular}{ll}
 &\texttt{MOVING}\\
 &\emph{remember to prepend repetitions}\\
@@ -273,9 +308,9 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \texttt{nG C+f|b}& go to line n PgUp \textbar{} PgDn\\
 \texttt{0|\^{}|\$}& BOL \textbar{} FCOL \textbar{}EOL\\
 \texttt{gg|G}&BOF \textbar{} EOF\\
-\texttt{gd}& definition of variable\\
+\texttt{gd | \%}& definition of variable \textbar{} matching brace\\
 \texttt{\#|*}& previous \textbar{} next occurance of word\\
-\texttt{\%}& matching brace\\
+\texttt{vib|viB|vi"}&select within () \textbar{} \{\} \textbar{} " \\
 \texttt{mx|'x}&set mark x \textbar{} goto line of x\\
 \texttt{\`{}x|\`{}.}&goto mark x \textbar{} line last edited\\
 \\
@@ -325,18 +360,6 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \end{tabular}
 
 \clearpage
-\begin{tabular}{ll}
-&\texttt{BASH SHORTCUTS}\\
-&\emph{C:Ctrl A:Alt}\\
-\texttt{C+a|e}&goto start \textbar{} end\\
-\texttt{C+u|k}&delete from cursor to start \textbar{} end\\
-\texttt{A+f|b}&go forward \textbar{} back by one word\\
-\texttt{!!}&run last command\\
-\texttt{!ls}&run last invocation of ls\\
-\texttt{!ls:p}&print what would be run\\
-\texttt{C+s|q}&stop \textbar{} resume output to screen\\
-\end{tabular}
-\vfill
 On the seventh day. The machines became aware.
 \begin{tabular}{l}
 OBTAIN\\
