@@ -294,8 +294,9 @@ But a GNOME did appear..
 \vfill
 \columnbreak
 The community declared that Vi should be iMproved, and Vi was improved to
-create ViM, the nerdiest of the text editors (except for emacs).
-\bigskip
+create ViM, the nerdiest of the text editors (except for emacs). And the lord
+said unto him.
+\vfill
 \begin{tabular}{ll}
 &\texttt{MOVING}\\
 &\emph{remember to prepend repetitions}\\
@@ -310,10 +311,27 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \texttt{gg|G}&BOF \textbar{} EOF\\
 \texttt{gd | \%}& definition of variable \textbar{} matching brace\\
 \texttt{\#|*}& previous \textbar{} next occurance of word\\
-\texttt{vib|viB|vi"}&select within () \textbar{} \{\} \textbar{} " \\
 \texttt{mx|'x}&set mark x \textbar{} goto line of x\\
 \texttt{\`{}x|\`{}.}&goto mark x \textbar{} line last edited\\
-\\
+\end{tabular}
+
+\vfill
+
+\begin{tabular}{ll}
+&\texttt{SELECTING} \emph{$<$num$><$ cmd$><$ obj$>$}\\
+\texttt{a|i <obj>}& select a \textbar{} inner <obj>\\
+\texttt{OBJECTS}&\\
+\texttt{b|B}&() \textbar{} \{\} \\
+\texttt{'|`|"}&\\
+\texttt{( | [ | \} }&\\
+\texttt{w|W|}&words\\
+\texttt{s|p}&sentences \textbar{} paragraphs\\
+\texttt{t}&markup language tags ($<>$) \\
+\end{tabular}
+
+\vfill
+
+\begin{tabular}{ll}
 &\texttt{EDITING}\\
 &\emph{remember to use movement commands}\\
 %\texttt{i|I}& insert \textbar{} beginning of line\\
@@ -327,12 +345,18 @@ create ViM, the nerdiest of the text editors (except for emacs).
 \texttt{p|P}& paste \textbar{} before cursor\\
 \texttt{u|U v|V}& undo \textbar{} linewise start visual \textbar{} linewise\\
 \texttt{<|>|\~}& deindent \textbar{} indent \textbar{} switch case\\
-\\
+\end{tabular}
+
+\vfill
+
+\begin{tabular}{ll}
 &\texttt{SPELL\ \ \ :set spell}\\
 \texttt{[|]s}&prev \textbar{} next\\
 \texttt{zg|zug}&add \textbar{} undo to dictionary\\
 \texttt{z=}&view spelling suggestions\\
-\\
+\end{tabular}
+\vfill
+\begin{tabular}{ll}
 &\texttt{MACROS}\\
 \texttt{ESC q|q|a}&start \textbar{} stop \textbar{} store in a\\
 \texttt{3@a}&repeat a 3 times\\
