@@ -1,0 +1,213 @@
+
+\subsection*{Financial Markets}
+Types of markets: \emph{equity/stock, bond, money/credit, commodity, physical
+asset, FOREX, derivatives}.
+
+Risk averse preferences under uncertainty == MU falling as wealth increases...
+risk averse/neutral/loving leads to indifference curves.
+
+An Edgworth box traces the outline of all possible allocations of 2 assets. An
+allocation of the endowment that improves the welfare of a consumer without
+reducing the welfare of another is a Pareto-improving allocation. Since
+consumers can refuse to trade the only outcomes from trade are pareto
+improving. 
+
+\begin{description}
+\item[risk] probabilities known
+\item[uncertainty] probabilities unknown
+\end{description}
+The \emph{expected utility hypothesis} implies that probs are applied to each
+state and that the decision maker maximises the expected utility...
+\[E[u(W)]=U(W_1,...W_l)=\pi_1u(W_1)+...\pi_lu(W_l)\]
+\subsubsection*{Risk aversion (RA)}
+\[
+\begin{array}{rl}
+u''(W) < 0 &\mbox{averse}\\
+u''(W) = 0 &\mbox{neutral}\\
+u''(W) > 0 &\mbox{loving}\\
+-W\frac{u''(W)}{u'(W)} &\mbox{index of rel RA}\\
+\frac{-u''(W)}{u'(W)} &\mbox{index of abs RA}\\
+\mbox{CRRA }u(W) =  &W^{1-\gamma}/(1-\gamma) \mbox{ if } \gamma \ne 1\\
+                    &lnW \mbox{ if } \gamma = 1\\
+\mbox{CARA }u(W) =& 1-e^{\phi W} \phi > 0\\
+\mbox{quadratic }u(W) =&W - bW^2, b>0\\
+\end{array}
+\]
+
+\subsubsection*{Portfolio Selection in EUH...}
+
+\begin{tabular}{rl}
+&\\
+\emph{Some definitions...}&\\
+budget constraint& $p_1x_1+..+p_nx_n=A$\\
+A &initial wealth\\
+$x_j$, $p_j$&holding, price of asset $j$\\
+$a_j=p_jx_j/A$& proportion invested in $j$\\
+terminal wealth& $W = (1 + r_p)A$\\
+$r_p$& is rate of return  \\
+$v_j=(1+r_j)p_j$ & payoff of asset $j$\\
+$x_0$&holding of risk free asset\\
+$v_{kj}$& arrow security pays 1 if\\
+&$k=j$ and 0 otherwise\\
+$r_0$&risk free asset\\
+\end{tabular}
+\begin{tabular}{rl}
+$var[W]$&$=E[W-E[W]]^2i$\\
+        &$E[W^2]-[E[W]]^2$\\
+$\mu_j=E[r_j]$&$\mu_P=E[r_P]$\\
+$\sigma_{jP}$&$=cov[r_j,r_P]$\\
+$\sigma_j=+\sqrt{\sigma_{jj}}$&stdev of $j$\\
+$\rho_{ij}=\sigma_{ij}/(\sigma_i\sigma_j)$& correlation coefficient\\
+$a_0,a_1,a_2,\ldots,a_n$&portfolio\\
+$\mu_P=\sum^n_{j=0}a_j\mu_j$&return of portfolio\\
+$\sigma^2_P=\sum^n_{i=0}\sum^n_{j=0}a_ia_j\sigma_{ij}$&var of portfolio\\
+$\sigma_{jP}=\sum^n_{i=0}a_i\sigma_{ij}$&covar between$j$ and $P$\\
+$s_j=\frac{\mu_j-r_0}{\sigma_j}$& Sharpe ratio\\
+&\\
+\end{tabular}
+
+An \emph{Arbitrage Portfolio} is where $A = 0$
+
+The \emph{Fundamental Valuation Relationship} is a collection of first order
+conditions, one for each asset. In general form: \[E[(1+r_j)H]=1 \mbox{for all
+j}\]
+
+H is a random variable specific to the context. It varies across states and
+agents, reflecting agents' holdings of portfolios.
+
+
+\[\mathcal{L}=\pi_1u(W_1)+\pi_2u(W_2)+...+\pi_lu(W_l)+\]
+\[\lambda(A-p_0x_0-p_1x_1-p_2x_2-..-p_nx_n)\]
+where
+\[W_k=v_0x_0+v_{k1}x_1+v_{k2}x_2+...+v_{kn}x_n\]
+The fundamental Valuation Relationship for (single period) portfolio allocation
+problem is:
+
+\[E[(1+r_j)u'(W)]=\lambda \mbox{ for all } j\]
+\[H_k=u'(W_k)/\lambda\]
+\subsubsection*{Implications of complete asset markets}
+\emph{If} agents agree on probs and asset markets are complete then $H$ becomes
+common ($H_k$ may still differ across agents as $u(W)$ differs). We need arrow
+securities or to construct portfolios that pay in only one state.
+
+\subsubsection*{Risk Neutrality}
+FVR in presence of risk free asset
+\[E[(r_j-r_0)u'(W)]=0\]
+Risk neutrality $u''(W)=0$ means $u'(W)=c$, substituting these into the FVR we
+get $E[r_j]=r_0$ << this is an identity. If it does not hold an investor will
+borrow at $r_0$ and invest in an asset with the highest $E[r_j]$
+
+So optimization of portfolios for risk-neutral agents is a moot question.
+
+\subsubsection*{Mean-Variance Model}
+Assume $u(W)=W-bW^2$ then
+\[E[u(W)]=F(E(W),var[w])\]
+using variance defs we get 
+\[E[u(W)]=E[W]-b[var[W]+(E[W])^2]\]
+variance of the portfolio
+\[\sigma^2_P=E[(r_P-\mu_P)^2]\]
+FVR in quadratic $u$ case
+\[\frac{\mu_j-r_o}{\sigma_{jP}/\sigma{P}}=\frac{\mu_P-r_0}{\sigma_P}\mbox{ for
+all } j\]
+
+So $\sigma_{jP}/\sigma_P$ is the increment to risk if we hold a bit more of
+$j$.
+
+FVR states that the expected return to any asset ( $\mu_j - r_0$) has to be
+proportional to its contribution to overall risk $\sigma_{jP}/\sigma{P}$.
+
+Investor acts to maximize $G(\mu_P,\sigma^2_P)$ the shape of G depends on the
+utility function. 
+
+$G=\mu_P-\alpha \sigma^2_P$ is a popular example (if all asset returns are
+normally dist and 
+
+$u=1-e^{\phi W}$) then $G$ is equivalent to expected utility maximisation and
+$\alpha=\frac{\phi}{2}$. 
+
+\subsubsection*{Intertemporal choice and the equity premium puzzle}
+
+Consideer two periods where  all wealth is consumed at $t+1$.
+
+\begin{tabular}{rl}
+$C_t, C_{t+1}$& consumption\\
+$W_t, W_t-C_t$& endowments\\
+$C_{t+1}=(1+r_{t+1})(W_t-C_t)$& IT budget constriaint\\
+$U(C_t,C_{t+1})=$&$u(C_t)+\delta u(C_{t+1})$\\
+$\delta$& subjective disc factor\\
+$(1/\delta)-1$& rate of time prefs\\
+$u'>0$&$u''<0$\\
+\end{tabular}
+
+Uncertainty: Recall FVR, if EUH holds:
+
+\[H=\delta\frac{u'(C_{t+1})}{u'(C_t)}\]
+\begin{description}
+\item[Lifetime portfolio selection] conventional wisdom is to take more risk
+when young. Not according to this model.
+
+\item[abandoning the EUH] we can consider a \emph{target wealth} or
+\emph{minimizing the risk of loss} model.
+
+\item[The role of human capital] if labour income is risky (risk of redundancy)
+then less risk is taken with portfolio. Can argue that young people, secure in
+their jobs should invest in equities. Older people have lower humancapital and
+should invest in bonds.
+
+\item[The Equity Premium Puzzle] Investors tend to favour low-risk bonds to
+their detriment. The value of $\gamma$ needed to justify the premium is around
+8.5 whereas most studies in other contexts found $\gamma$ to be less than 3.
+
+\item[risk free rate puzzle] investors transfer too much wealth from the
+present to the future for plausible values of $\delta$
+
+\end{description}
+
+What to do... MEASURE HOW PEOPLE BEHAVE \emph{ - David Griffin}
+
+\subsubsection*{The Mean Variance $(\mu,\sigma)$ Approach}
+Plane is $\mu_P,\sigma_P)$. Draw triangle between asset 1, asset 2 and V on
+vert ($\mu_P$) axis. V is the risk free portfolio. Portfolios can exist inside
+triangle and outside triangle if we allow short selling. If there is no risk
+free asset we start with two assets, combine them and continue.
+
+\emph{First mutual fund theorem} of portfolio analysis: given $n>2$ portfolios,
+there exist two composite assets (mutual funds) such that evry
+$(\mu_P,\sigma_P)$ on the efficient frontier can be obtained holding only the
+two fuds.
+
+$r_0$ and $r_l$ if it is different are on the vertical axis. Plot line from
+them tangent to frontier.
+
+\emph{second mutual fund theorem} any efficient portfolio can be obtained by
+holding risk free asset and a mutual fund.
+
+All efficient portfolios share the same Sharpe ratio.
+
+%\subsubsection*{The CAPM}
+%Assumptions: \emph{equilibrium, frictionless, unlimited borrowing/lending,
+%assets are divisible, investors are price takers, taxes are neutral} We use
+%mean-variance portfolio selection, and homogenous beliefs.
+%
+%\[\beta_{jZ}=\sigma_{jZ}/\sigma^2_Z\mbox{ \ }z_1,\ldots,z_n \mbox{ is
+%portfolio} \sum z_j=1\]
+%
+%CML goes from $r_0$ on $\mu$ axis with slope of $(\mu_M-r_0)/\sigma_M$
+%
+%Characteristic line goes through origin of $\mu_j-r_0,\mu_M-r_0)$ plane with
+%slope $\beta_j$
+%
+%SML goes from $r_0$ to $(\mu_M,1)$ on $(\mu_j,\beta_j)$ plane.
+%
+%Assets above the SML are underpriced.
+\subsubsection*{Options}
+\begin{description}
+\item[call] the right to purchase at the exercise or strike price (writer must
+sell)
+\item[put] the right to sell at ex or strike price (writer must buy)
+\item[American] can be exercised on or before the expiry date
+\item[European] can be exercised only at the expiry date
+\end{description}
+
+\clearpage
+
